@@ -1,10 +1,19 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Class used in RhymersFactory
+ */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-	private int totalRejected = 0;
+    /**
+     * value to count amount of rejected
+     */
+    private int totalRejected = 0;
 
-	int reportRejected() {
+    /**
+     * @return the number of rejected
+     */
+    int reportRejected() {
         return totalRejected;
     }
 
