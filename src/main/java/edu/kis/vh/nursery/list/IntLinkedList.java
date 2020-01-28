@@ -15,6 +15,7 @@ public class IntLinkedList {
 			last.next.prev = last;
 			last = last.next;
 		}
+
 	}
 
 	public boolean isEmpty() {

@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntArrayStack;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
 	private final DefaultCountingOutRhymer TEMP = new DefaultCountingOutRhymer();
@@ -12,7 +14,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
         int ret = TEMP.countOut();
 
-        while (!TEMP.callCheck())
+        while (!callCheck())
 
             countIn(TEMP.countOut());
 
