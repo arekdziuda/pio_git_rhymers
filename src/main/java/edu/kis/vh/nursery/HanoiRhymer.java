@@ -1,17 +1,29 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+import edu.kis.vh.nursery.list.IntArrayStack;
 
-int totalRejected = 0;
+/**
+ * Class used in RhymersFactory
+ */
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-	public int reportRejected() {
-		return totalRejected;
-	}
+    /**
+     * value to count amount of rejected
+     */
+    private int totalRejected = 0;
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
-	}
+    /**
+     * @return the number of rejected
+     */
+    int reportRejected() {
+        return totalRejected;
+    }
+
+    @Override
+    public void countIn(int in) {
+        if (!callCheck() && in > peekaboo())
+            totalRejected++;
+        else
+            super.countIn(in);
+    }
 }
